@@ -1,0 +1,30 @@
+@import "variables";
+@import "mixin";
+
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+}
+
+//helperClass to hide/show element
+
+.hideForMobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hideForDesktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
