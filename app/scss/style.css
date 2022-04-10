@@ -1,0 +1,284 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  height: 100vh;
+  background-image: url(../../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  background-color: #fafbff;
+}
+
+body p {
+  color: #858fad;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header {
+  margin-top: 63px;
+  padding: 40px;
+  text-align: center;
+  background-image: url(../../images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 51px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #293356;
+}
+
+.card {
+  background-color: white;
+  height: 400px;
+  width: 540px;
+  padding: 42px 0px;
+}
+
+.card .infos {
+  padding-left: 45px;
+  padding-right: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 31px;
+}
+
+.card .infos .pageview p {
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  font-size: 14px;
+}
+
+.card .infos .monthprice {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .infos .monthprice strong {
+  font-size: 42px;
+  letter-spacing: -1.3px;
+  color: #293356;
+}
+
+.card .bar_holder {
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 44px;
+  height: 8px;
+  width: calc(100% - 90px);
+  border-radius: 4px;
+  background-color: #cdd7ee;
+  position: relative;
+}
+
+.card .bar_holder .bar_progress {
+  height: 100%;
+  border-radius: 4px;
+  width: 90px;
+  background-color: #a5f3eb;
+}
+
+.card .bar_holder .thumb {
+  aspect-ratio: 1;
+  height: 30px;
+  background-color: #10d5c2;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+  left: 90px;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .billing_option {
+  padding-right: 45px;
+  padding-left: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  margin-bottom: 41px;
+}
+
+.card .billing_option .monthBill {
+  margin-right: 20px;
+}
+
+.card .billing_option .yearBill {
+  margin-left: 11px;
+  margin-right: 10px;
+}
+
+.card .billing_option .Discount {
+  font-size: 10px;
+  padding: 3px;
+  color: #ff8c66;
+  border-radius: 3px;
+  font-weight: 800;
+  background-color: #feece7;
+}
+
+.card .card_footer {
+  border-top: solid 1px #cdd7ee;
+  padding: 27px 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card_footer_left .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.card .card_footer_left .line .check {
+  width: 7px;
+  aspect-ratio: 1;
+  background-image: url(../../images/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.card .card_footer_left .line p {
+  font-size: 13px;
+}
+
+.card .card_footer_right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card .card_footer_right a {
+  font-size: 13px;
+  background-color: #293356;
+  color: #bdccff;
+  padding: 12px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.card .card_footer_right a:hover {
+  color: white;
+  font-weight: 800;
+}
+
+@media (max-width: 65.5625rem) {
+  .hideForMobile {
+    display: none;
+  }
+}
+
+@media (min-width: 65.625rem) {
+  .hideForDesktop {
+    display: none;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 17px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #10d5c2;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 12px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 10px;
+}
+
+input:checked + .slider {
+  background-color: #10d5c2;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #10d5c2;
+          box-shadow: 0 0 1px #10d5c2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  transform: translateX(16px);
+}
+/*# sourceMappingURL=style.css.map */

@@ -12,7 +12,168 @@ html{
     padding: 0;
 }
 body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    background-image: url(../../images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: $VeryPaleBlue;
+    p{
+        color: $GrayishBlue;
+    }
+}
 
+main{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    height: 100%;
+}
+
+header{
+    margin-top: 63px;
+    padding: 40px;
+    text-align: center;
+    background-image: url(../../images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 51px;
+    h1{
+        font-size: 28px;
+        margin-bottom: 12px;
+        color: $DarkDesaturatedBlue;
+    }
+}
+
+.card{
+    background-color: $White;
+    height: 400px;
+    width: 540px;
+    padding: 42px 0px;
+    .infos{
+        padding-left: 45px;
+        padding-right: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 31px;
+        .pageview{
+            p{
+                text-transform: uppercase;
+                letter-spacing: 2.4px;
+                font-size: 14px;
+            }
+        }
+        .monthprice{
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            strong{
+                font-size: 42px;
+                letter-spacing: -1.3px;
+                color: $DarkDesaturatedBlue;
+            }
+        }
+    }
+    .bar_holder{
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-bottom: 44px;
+        height: 8px;
+        width: calc(100% - 90px);
+        border-radius: 4px;
+        background-color: $LightGrayishBlue;
+        position: relative;
+        .bar_progress{
+            height: 100%;
+            border-radius: 4px;
+            width: 90px;
+            background-color: $SoftCyan;
+        }
+        .thumb{
+            aspect-ratio: 1;
+            height: 30px;
+            background-color: $StrongCyan;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            left: 90px;
+            background-image: url(../../images/icon-slider.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover{
+
+            }
+        }
+    }
+    
+    .billing_option{
+        padding-right: 45px;
+        padding-left: 155px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        margin-bottom: 41px;
+        .monthBill{
+            margin-right: 20px;
+        }
+        .yearBill{
+            margin-left: 11px;
+            margin-right: 10px;
+        }
+        .Discount{
+            font-size: 10px;
+            padding: 3px;
+            color: $LightRed;
+            border-radius: 3px;
+            font-weight: 800;
+            background-color: $LightGrayishRed;
+        }
+
+    }
+    .card_footer{
+        border-top: solid 1px $LightGrayishBlue;
+        padding: 27px 48px;
+        display: flex;
+        justify-content: space-between;
+        &_left{
+            .line{
+                display: flex;
+                margin-bottom: 10px;
+                .check{
+                    width: 7px;
+                    aspect-ratio: 1;
+                    background-image: url(../../images/icon-check.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-right: 10px;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+        &_right{
+            align-self: center;
+            a{
+                font-size: 13px;
+                background-color: $DarkDesaturatedBlue;
+                color: $PaleBlue;
+                padding: 12px 40px;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: 800;
+            }
+            a:hover{
+                color: $White;
+                font-weight: 800;
+            }
+        }
+    }
 }
 
 //helperClass to hide/show element
@@ -28,3 +189,59 @@ body{
         display: none;
     }
 }
+
+// toggle styles 
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 17px;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $StrongCyan;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 12px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px;
+  }
+  
+  input:checked + .slider {
+    background-color: $StrongCyan;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $StrongCyan;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
