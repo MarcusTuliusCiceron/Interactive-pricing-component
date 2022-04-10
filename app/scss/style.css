@@ -1,3 +1,7 @@
+:root {
+  --progress: 10%;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -84,7 +88,7 @@ header h1 {
   font-size: 14px;
 }
 
-.card .infos .monthprice {
+.card .infos .monthpricediv {
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,10 +98,20 @@ header h1 {
           align-items: center;
 }
 
-.card .infos .monthprice strong {
+.card .infos .monthpricediv strong {
   font-size: 42px;
   letter-spacing: -1.3px;
   color: #293356;
+}
+
+.card .bar {
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 44px;
+}
+
+.card .bar input {
+  width: 100%;
 }
 
 .card .bar_holder {
@@ -114,8 +128,9 @@ header h1 {
 .card .bar_holder .bar_progress {
   height: 100%;
   border-radius: 4px;
-  width: 90px;
+  width: var(--progress);
   background-color: #a5f3eb;
+  position: relative;
 }
 
 .card .bar_holder .thumb {
@@ -124,10 +139,10 @@ header h1 {
   background-color: #10d5c2;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  right: 0;
+  -webkit-transform: translateY(-50%) translateX(50%);
+          transform: translateY(-50%) translateX(50%);
   border-radius: 50%;
-  left: 90px;
   background-image: url(../../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;

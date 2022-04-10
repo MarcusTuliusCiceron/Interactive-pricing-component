@@ -1,6 +1,9 @@
 @import "variables";
 @import "mixin";
 
+:root{
+    --progress: 10%;
+}
 
 html{
     box-sizing: border-box;
@@ -67,7 +70,7 @@ header{
                 font-size: 14px;
             }
         }
-        .monthprice{
+        .monthpricediv{
             margin-right: 10px;
             display: flex;
             align-items: center;
@@ -76,6 +79,14 @@ header{
                 letter-spacing: -1.3px;
                 color: $DarkDesaturatedBlue;
             }
+        }
+    }
+    .bar{
+        padding-left: 45px;
+        padding-right: 45px;
+        margin-bottom: 44px;
+        input{
+            width: 100%;
         }
     }
     .bar_holder{
@@ -90,8 +101,9 @@ header{
         .bar_progress{
             height: 100%;
             border-radius: 4px;
-            width: 90px;
+            width: var(--progress);
             background-color: $SoftCyan;
+            position: relative;
         }
         .thumb{
             aspect-ratio: 1;
@@ -99,9 +111,10 @@ header{
             background-color: $StrongCyan;
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            right: 0;
+            transform: translateY(-50%) translateX(50%);
             border-radius: 50%;
-            left: 90px;
+            
             background-image: url(../../images/icon-slider.svg);
             background-repeat: no-repeat;
             background-position: center;
