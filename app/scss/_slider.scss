@@ -1,0 +1,76 @@
+.card{
+    .bar{
+        //Firefox styles
+        input[type=range]{
+            /* fix for FF unable to apply focus style bug  */
+            border: 1px solid white; 
+        
+            /*required for proper track sizing in FF*/
+            width: 100%;
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            background: $LightGrayishBlue;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type=range]::-moz-range-progress {
+            height: 8px;
+            background: $SoftCyan;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            border: none;
+            height: 38px;
+            width: 38px;
+            border-radius: 50%;
+            background-color: $StrongCyan;
+            background-image: url(../../images/icon-slider.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /*hide the outline behind the border*/
+        input[type=range]:-moz-focusring{
+            outline: 1px solid white;
+            outline-offset: -1px;
+        }
+        //Webkit browser styles styles
+        input[type=range]{
+            -webkit-appearance: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 8px;
+            background: $LightGrayishBlue;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type=range]::-webkit-slider-progress-value {
+            background-color: orange;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: none;
+            height: 38px;
+            width: 38px;
+            border-radius: 50%;
+            background-color: $StrongCyan;
+            background-image: url(../../images/icon-slider.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: -16px;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+    }
+}

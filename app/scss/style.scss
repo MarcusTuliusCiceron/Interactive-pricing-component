@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixin";
+@import "slider";
 
 :root{
     --progress: 10%;
@@ -87,7 +88,11 @@ header{
         margin-bottom: 44px;
         input{
             width: 100%;
+        //     background-color: $SoftCyan;
+        //     background: $SoftCyan;
+        //     color: $SoftCyan;
         }
+          
     }
     .bar_holder{
         margin-left: 45px;
